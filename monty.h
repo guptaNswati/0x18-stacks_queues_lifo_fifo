@@ -44,6 +44,10 @@ extern stack_t **head;
 
 /** FUNCTION PROTOTYPES **/
 void ac_check(int ac);
-int av_check(char *av);
+void av_check(char *av);
+void malloc_fail();
+void invalid_instruction(int, char*);
+int file_size(char *);
+
 
 #endif
