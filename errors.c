@@ -24,7 +24,7 @@ void ac_check(int ac)
  *
  */
 
-void *av_check(char *av)
+void av_check(char *av)
 {
 	int fd;
 
