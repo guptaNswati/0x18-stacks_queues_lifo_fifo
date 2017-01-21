@@ -44,7 +44,7 @@ void *av_check(char *av)
  * Return: void
  */
 
-void malloc_fail()
+void malloc_fail(void)
 {
 	printf("Error: malloc failed\n");
 	exit(EXIT_FAILURE);
