@@ -40,4 +40,8 @@ typedef struct instruction_s
 
 extern stack_t **head;
 
+/** FUNCTION PROTOTYPES **/
+void ac_check(int ac);
+int av_check(char *av);
+
 #endif
