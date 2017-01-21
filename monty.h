@@ -48,6 +48,6 @@ void av_check(char *av);
 void malloc_fail(void);
 void invalid_instruction(int, char*);
 int file_size(char *);
-
+char **read_in(char *);
 
 #endif
