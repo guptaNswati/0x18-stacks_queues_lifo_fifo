@@ -26,7 +26,7 @@ int main(int ac, char *av[])
 			push_arg = strtok(NULL, " ");
 			printf("%s\n", push_arg);
 		}
-		if (strcmp(curr_cmd[0], "#") == 0)
+		else if (curr_cmd[0] == '#')
 			continue;
 		else
 			validator(curr_cmd, line);
