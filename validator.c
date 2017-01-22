@@ -3,6 +3,7 @@
 /**
  * validator - checks to see if instruction is valid opcode or not
  * @opcode: incoming operator
+ * @line_number: line number from file for error handling
  * Return: void
  */
 
