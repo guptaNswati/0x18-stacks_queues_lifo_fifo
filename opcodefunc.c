@@ -17,13 +17,11 @@ instruction_t *get_op_code(char *opcode)
 		{"pstr", str_top},
 		{"rotl", rot_lft},
 		{"rotr", rot_rgt},
-		{"stack", lifo},
-		{"queue", fifo},
 		{NULL, NULL}
 	};
 	int i;
 
-	for (i = 0; i < 15;i++)
+	for (i = 0; i < 13;i++)
 	{
 		if (strcmp(instructs[i].opcode, opcode) == 0)
 			return (instructs[i].f);

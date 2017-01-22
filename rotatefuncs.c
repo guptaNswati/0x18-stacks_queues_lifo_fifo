@@ -34,28 +34,12 @@ void rot_rgt(stack_s **head, unsigned int num)
 }
 
 /**
-* lifo - sets the format of the stack_s list to a stack order, last in first out.
+* switch_mode - switches adding to list to stack or queue mode
 * @head: pointer to head pointer of list
-* @num: line number of opcode
+* @data: data for new node
+* @flag: indicator of stack or queue mode
 * Return: nothing
 **/
-void lifo(stack_s **head, unsigned int num)
-{
-	add_begining();
-}
-
-/**
-* fifo - sets the format of the stack_s list to a queue order (FIFO),
-* first in first out.
-* @head: pointer to head pointer of list
-* @num: line number of opcode
-* Return: nothing
-**/
-void fifo(stack_s **head, unsigned int num)
-{
-	add_end();
-}
-
 void switch_mode(stack_s **head, int data, int flag)
 {
 	/* if flag is on, list mode is in queue */
