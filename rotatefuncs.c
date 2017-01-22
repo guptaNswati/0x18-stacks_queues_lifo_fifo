@@ -32,19 +32,3 @@ void rot_rgt(stack_s **head, unsigned int num)
                 return;
 	add_begining(head, remove_end(head));
 }
-
-/**
-* switch_mode - switches adding to list to stack or queue mode
-* @head: pointer to head pointer of list
-* @data: data for new node
-* @flag: indicator of stack or queue mode
-* Return: nothing
-**/
-void switch_mode(stack_s **head, int data, int flag)
-{
-	/* if flag is on, list mode is in queue */
-	if (flag)
-		add_end(head, data);
-	else
-		add_begining(head, data);
-}

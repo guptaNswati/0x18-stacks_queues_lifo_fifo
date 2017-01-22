@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * add_tops - adds the top two elements of the stack_s list if list is
- * two elements or long and stores result in second top, removes top.
- * @head: pointer to head pointer of stack_s list.
- * @num: line number of opcode
- * Return: nothing
- **/
+* add_tops - adds the top two elements of the stack_s list if list is
+* two elements or long and stores result in second top, removes top.
+* @head: pointer to head pointer of stack_s list.
+* @num: line number of opcode
+* Return: nothing
+**/
 void add_tops(stack_s **head, unsigned int num)
 {
 	stack_s *tmp;
@@ -24,13 +24,13 @@ void add_tops(stack_s **head, unsigned int num)
 }
 
 /**
- * sub_tops - subtracts the top element from second top element of the stack_s
- * list if its two elements or long, stores result in second and removes top.
- * two elements or long.
- * @head: pointer to head pointer of stack_s list.
- * @num: line number of opcode
- * Return: nothing
- **/
+* sub_tops - subtracts the top element from second top element of the stack_s
+* list if its two elements or long, stores result in second and removes top.
+* two elements or long.
+* @head: pointer to head pointer of stack_s list.
+* @num: line number of opcode
+* Return: nothing
+**/
 void sub_tops(stack_s **head, unsigned int num)
 {
 	stack_s *tmp;
@@ -48,13 +48,13 @@ void sub_tops(stack_s **head, unsigned int num)
 }
 
 /**
- * div_tops - divides second top two element by top element of the stack_s list,
- * if its two elemets or long, stores result in second and removes top.
- * two elements or long.
- * @head: pointer to head pointer of stack_s list.
- * @num: line number of opcode
- * Return: nothing
- **/
+* div_tops - divides second top two element by top element of the stack_s list,
+* if its two elemets or long, stores result in second and removes top.
+* two elements or long.
+* @head: pointer to head pointer of stack_s list.
+* @num: line number of opcode
+* Return: nothing
+**/
 void div_tops(stack_s **head, unsigned int num)
 {
 	stack_s *tmp;
@@ -77,12 +77,12 @@ void div_tops(stack_s **head, unsigned int num)
 }
 
 /**
- * mul_tops - multiplies the top two elements of the stack_s list if list is
- * two elements or long, stores result in second and removes top.
- * @head: pointer to head pointer of stack_s list.
- * @num: line number of opcode
- * Return: nothing
- **/
+* mul_tops - multiplies the top two elements of the stack_s list if list is
+* two elements or long, stores result in second and removes top.
+* @head: pointer to head pointer of stack_s list.
+* @num: line number of opcode
+* Return: nothing
+**/
 void mul_tops(stack_s **head, unsigned int num)
 {
 	stack_s *tmp;
