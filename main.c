@@ -11,7 +11,7 @@ int main(int ac, char *av[])
 {
 	FILE *f;
 	//ssize_t rcount = 1;
-	size_t n = 0;
+	size_t n = 0, line = 1;
 	char *cmd = NULL, *curr_cmd, *push_arg;
 
 	ac_check(ac);
@@ -26,8 +26,11 @@ int main(int ac, char *av[])
 			push_arg = strtok(NULL, " ");
 			printf("%s\n", push_arg);
 		}
+		if (strcmp(curr_cmd[0], "#") == 0)
+			continue;
 		else
-			validator(curr_cmd);
+			validator(curr_cmd, line);
+		line++;
 	}
 
 	return (0);
