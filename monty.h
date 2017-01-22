@@ -1,3 +1,14 @@
+#ifndef _MONTY_H_
+
+#define _MONTY_H_
+
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <fcntl.h>
+
 /**
 * struct stack_s - doubly linked list representation of a stack (or queue)
 * @n: integer
@@ -30,3 +41,13 @@ typedef struct instruction_s
 } instruction_t;
 
 extern stack_t **head;
+
+/** FUNCTION PROTOTYPES **/
+void ac_check(int ac);
+void av_check(char *av);
+void malloc_fail(void);
+void invalid_instruction(int, char*);
+int file_size(char *);
+char **read_in(char *);
+
+#endif
