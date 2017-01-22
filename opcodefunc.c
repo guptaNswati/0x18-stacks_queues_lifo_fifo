@@ -2,7 +2,7 @@
 
 instruction_t *get_op_code(char *opcode)
 {
-	/* push, nop, comment */
+	/* seperate: push, nop, comment */
 	instruction_t instructs[] = {
 		{"pall", print_list},
 		{"pint", print_top},
@@ -51,3 +51,4 @@ void swap_tops(stack_s **head, int num)
 	(*head)->n = *head->next->n;
 	(*head)->next->n = tmp;
 }
+
