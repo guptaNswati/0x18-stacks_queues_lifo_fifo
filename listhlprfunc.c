@@ -82,23 +82,27 @@ stack_s *remove_top(stack_s **head)
 /**
 * remove_end - removes a node from the end of the stack_s list.
 * @head: pointer to head pointer of the list
-* Return: nothing
+* Return: value of last node
 **/
-void remove_end(stack_s **head)
+int remove_end(stack_s **head)
 {
 	stack_s *tmp;
+	int value;
 
-	if (!head || !(*head))
-                return;
-
+	/* function called only when there are more than two elements in list */
 	if (!(*head)->next)
+	{
+		value = (*head)->n;
 		free(*head);
+	}
 	else
 	{
 		tmp = *head;
 		while (tmp->next)
 			tmp = tmp->next;
+		value = tmp->n;
 		tmp->prev->next = NULL;
 		free(tmp);
 	}
+	return (value);
 }
