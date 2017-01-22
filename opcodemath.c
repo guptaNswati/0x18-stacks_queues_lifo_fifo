@@ -7,7 +7,7 @@
  * @num: line number of opcode
  * Return: nothing
  **/
-void add_tops(stack_s **head, int num)
+void add_tops(stack_s **head, unsigned int num)
 {
 	stack_s *tmp;
 
@@ -31,7 +31,7 @@ void add_tops(stack_s **head, int num)
  * @num: line number of opcode
  * Return: nothing
  **/
-void sub_tops(stack_s **head, int num)
+void sub_tops(stack_s **head, unsigned int num)
 {
 	stack_s *tmp;
 
@@ -55,7 +55,7 @@ void sub_tops(stack_s **head, int num)
  * @num: line number of opcode
  * Return: nothing
  **/
-void div_tops(stack_s **head, int num)
+void div_tops(stack_s **head, unsigned int num)
 {
 	stack_s *tmp;
 
@@ -83,7 +83,7 @@ void div_tops(stack_s **head, int num)
  * @num: line number of opcode
  * Return: nothing
  **/
-void mul_tops(stack_s **head, int num)
+void mul_tops(stack_s **head, unsigned int num)
 {
 	stack_s *tmp;
 
@@ -107,7 +107,7 @@ void mul_tops(stack_s **head, int num)
 * @num: line number of opcode
 * Return: nothing
 **/
-void mod_tops(stack_s **head, int num)
+void mod_tops(stack_s **head, unsigned int num)
 {
 	stack_s *tmp;
 

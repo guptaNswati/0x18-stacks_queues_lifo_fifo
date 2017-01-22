@@ -24,12 +24,12 @@ stack_s *add_begining(stack_s **head, int data)
 }
 
 /**
-* add_begining - add a new node in the end of stack_s list.
+* add_end - add a new node in the end of stack_s list.
 * @head: pointer to head pointer of the list
 * @data: new node data
 * Return: address of new node
 **/
-stack_s **add_end(stack_s **head, int data)
+stack_s *add_end(stack_s **head, int data)
 {
 	stack_s *new, *tmp;
 
@@ -59,16 +59,15 @@ stack_s **add_end(stack_s **head, int data)
 }
 
 /**
-* remove_begining - removes a node from the begining of the stack_s list
-* and returns it.
+* remove_begining - removes a node from the begining of the stack_s list.
 * @head: pointer to head pointer of the list
-* Return: removed node
+* Return: nothing
 **/
-stack_s *remove_top(stack_s **head)
+void remove_top(stack_s **head)
 {
 	stack_s *tmp;
 
-	if (!head || !(*head))
+	if (!(*head || head))
 		return;
 	tmp = *head;
 	if (tmp->next)
@@ -76,7 +75,7 @@ stack_s *remove_top(stack_s **head)
 		*head = (*head)->next;
 		(*head)->prev = NULL;
 	}
-	return (tmp);
+	free(tmp);
 }
 
 /**

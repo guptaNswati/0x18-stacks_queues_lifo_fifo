@@ -36,7 +36,7 @@ instruction_t *get_op_code(char *opcode)
 * @num: line number of opcode
 * Return: nothing
 **/
-void swap_tops(stack_s **head, int num)
+void swap_tops(stack_s **head, unsigned int num)
 {
 	int tmp;
 
@@ -57,7 +57,7 @@ void swap_tops(stack_s **head, int num)
 * @num: line number of opcode
 * Return: nothing
 **/
-void chr_top(stack_s **head, int num)
+void chr_top(stack_s **head, unsigned int num)
 {
 	if (!(*head || head))
 	{
@@ -79,7 +79,7 @@ void chr_top(stack_s **head, int num)
 * @num: line number of opcode
 * Return: nothing
 **/
-void str_top(stack_s **head, int num)
+void str_top(stack_s **head, unsigned int num)
 {
 	stack_s *tmp;
 
