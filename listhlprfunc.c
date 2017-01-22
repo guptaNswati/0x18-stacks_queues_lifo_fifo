@@ -64,7 +64,7 @@ stack_s **add_end(stack_s **head, int data)
 * @head: pointer to head pointer of the list
 * Return: removed node
 **/
-stack_s *remove_begining(stack_s **head)
+stack_s *remove_top(stack_s **head)
 {
 	stack_s *tmp;
 
