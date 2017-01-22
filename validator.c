@@ -12,8 +12,8 @@ void validator(char *opcode, int line_number)
 	int i = 0, total = 0;
 	char *valid_codes[] = {	"pall", "pint", "pop", "swap", "add",
 				"nop", "sub", "div", "mul", "mod", "pchar",
-				"pstr",	"rotl",	"rotr"};
-	while (i < 14)
+				"pstr",	"rotl",	"rotr", "push"};
+	while (i < 15)
 	{
 		if (strcmp(opcode, valid_codes[i]) == 0)
 			total += 1;
