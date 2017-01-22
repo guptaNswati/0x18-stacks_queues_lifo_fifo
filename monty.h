@@ -51,4 +51,6 @@ void invalid_instruction(int, char*);
 int file_size(char *);
 char **read_in(char *);
 void validator(char *, int line_number);
+void push(int);
+
 #endif
