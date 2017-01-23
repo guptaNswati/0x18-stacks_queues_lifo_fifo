@@ -13,7 +13,7 @@ void add_tops(stack_s **head, unsigned int num)
 
 	if (!(*head || head || (*head)->next))
 	{
-		printf("L<%d>: can't add, stack too short\n", num);
+		printf("L%d: can't add, stack too short\n", num);
 		exit(EXIT_FAILURE);
 	}
 	tmp = *head;
@@ -37,7 +37,7 @@ void sub_tops(stack_s **head, unsigned int num)
 
 	if (!(*head || head || (*head)->next))
 	{
-		printf("L<%d>: can't sub, stack too short\n", num);
+		printf("L%d: can't sub, stack too short\n", num);
 		exit(EXIT_FAILURE);
 	}
 	tmp = *head;
@@ -61,12 +61,12 @@ void div_tops(stack_s **head, unsigned int num)
 
 	if (!(*head || head || (*head)->next))
 	{
-		printf("L<%d>: can't div, stack too short\n", num);
+		printf("L%d: can't div, stack too short\n", num);
 		exit(EXIT_FAILURE);
 	}
 	if ((*head)->n == 0)
 	{
-		printf("L<%d>: division by zero\n", num);
+		printf("L%d: division by zero\n", num);
 		exit(EXIT_FAILURE);
 	}
 	tmp = *head;
@@ -89,7 +89,7 @@ void mul_tops(stack_s **head, unsigned int num)
 
 	if (!(*head || head || (*head)->next))
 	{
-		printf("L<%d>: can't mul, stack too short\n", num);
+		printf("L%d: can't mul, stack too short\n", num);
 		exit(EXIT_FAILURE);
 	}
 	tmp = *head;
@@ -113,12 +113,12 @@ void mod_tops(stack_s **head, unsigned int num)
 
 	if (!(*head || head || (*head)->next))
 	{
-		printf("L<%d>: can't mod, stack too short\n", num);
+		printf("L%d: can't mod, stack too short\n", num);
 		exit(EXIT_FAILURE);
 	}
 	if ((*head)->n == 0)
 	{
-		printf("L<%d>: division by zero\n", num);
+		printf("L%d: division by zero\n", num);
 		exit(EXIT_FAILURE);
 	}
 	tmp = *head;

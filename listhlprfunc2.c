@@ -32,7 +32,7 @@ void print_top(stack_s **head, int num)
 	if (*head)
 		printf("%d\n", (*head)->n);
 	else
-		printf("L<%d>: can't print, stack empty\n", num);
+		printf("L%d: can't print, stack empty\n", num);
 		exit(EXIT_FAILURE);
 }
 
