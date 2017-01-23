@@ -52,5 +52,20 @@ int file_size(char *);
 char **read_in(char *);
 void validator(char *, int line_number);
 void push(int);
+/*place holders until functions are complete*/
+void pall(void);
+void pint(void);
+void pop(void);
+void swap(void);
+void add(void);
+void nop(void);
+void sub(void);
+void div(void);
+void mul(void);
+void mod(void);
+void pchar(void);
+void pstr(void);
+void rotl(void);
+void rotr(void);
 
 #endif
