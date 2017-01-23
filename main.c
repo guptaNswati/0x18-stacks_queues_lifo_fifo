@@ -33,7 +33,5 @@ int main(int ac, char *av[])
 	}
 	free(cmd);
 	free(curr_cmd);
-	if (err_exit == 1)
-		exit(EXIT_FAILURE);
 	return (0);
 }
