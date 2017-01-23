@@ -41,7 +41,7 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern stack_t **head;
+extern stack_t *head;
 
 /** FUNCTION PROTOTYPES **/
 void ac_check(int ac);

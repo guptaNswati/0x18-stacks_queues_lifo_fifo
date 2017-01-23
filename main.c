@@ -10,7 +10,6 @@
 int main(int ac, char *av[])
 {
 	FILE *f;
-	//ssize_t rcount = 1;
 	size_t n = 0, line = 1;
 	char *cmd = NULL, *curr_cmd, *push_arg;
 
@@ -32,6 +31,9 @@ int main(int ac, char *av[])
 			validator(curr_cmd, line);
 		line++;
 	}
-
+	free(cmd);
+	free(curr_cmd);
+	if (err_exit == 1)
+		exit(EXIT_FAILURE);
 	return (0);
 }
