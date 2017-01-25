@@ -47,7 +47,7 @@ extern stack_t *head;
 void ac_check(int ac);
 void av_check(char *av);
 void malloc_fail(void);
-void switch_mode(stack_s **head, int data, int *flag);
+void push(stack_s **head, int data, int *flag);
 instruction_t (*get_op_code(char *opcode))(stack_s **head, unsigned int num);
 void instrction_caller(char *, unsigned int, stack_s **, int, int *);
 /* data structure helpers  */
@@ -68,7 +68,6 @@ void mul_tops(stack_s **head, unsigned int num);
 void mod_tops(stack_s **head, unsigned int num);
 void rot_lft(stack_s **head, unsigned int num);
 void rot_rgt(stack_s **head, unsigned int num);
-void push(int);
 
 
 

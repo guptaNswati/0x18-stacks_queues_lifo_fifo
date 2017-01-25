@@ -7,7 +7,7 @@
 * @flag: indicator of stack or queue mode
 * Return: nothing
 **/
-void switch_mode(stack_s **head, int data, int *flag)
+void push(stack_s **head, int data, int *flag)
 {
 	/* if flag is on, list mode is in queue */
 	if (*(flag) == 1)
@@ -59,13 +59,11 @@ instruction_t (*get_op_code(char *opcode))(stack_s **head, unsigned int num)
 * Return: nothing
 **/
 void instrction_caller(char *opcode, unsigned int num, stack_s **head,
-		       int data, int *flag)
+		       int *flag)
 {
 	instruction_t (*func)(stack_s **, unsigned int);
 
-	if (strcmp(opcode, "push") == 0)
-		switch_mode(head, data, flag);
-	else if (strcmp(opcode, "stack") == 0)
+	if (strcmp(opcode, "stack") == 0)
 		*(flag) = 0;
 	else if (strcmp(opcode, "queue") == 0)
 		*(flag) = 1;

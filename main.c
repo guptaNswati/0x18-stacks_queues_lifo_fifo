@@ -12,7 +12,8 @@ int main(int ac, char *av[])
 	FILE *f;
 	size_t n = 0, line = 1;
 	char *cmd = NULL, *curr_cmd, *push_arg;
-
+	int flag = 0;
+	/* Checks if argcount is valid and file can be opened  */
 	ac_check(ac);
 	av_check(av[1]);
 	f = fopen(av[1], "r");
@@ -24,15 +25,16 @@ int main(int ac, char *av[])
 		{
 			push_arg = strtok(NULL, " ");
 			printf("%s\n", push_arg);
+			push(&head, push_arg, &flag);
 		}
-		else if (curr_cmd[0] == '#')
+		else if (curr_cmd[0] == '#' || strcmp(curr_cmd[0], "nop") == 0)
 			continue;
 		else
-			validator(curr_cmd, line);
+			/* checks if given arg is a valid instruction or not  */
+			instrction_caller(curr_cmd, line, &head, &flag);
 		line++;
 	}
 	free(cmd);
 	free(curr_cmd);
 	return (0);
 }
-
