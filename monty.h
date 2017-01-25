@@ -47,25 +47,30 @@ extern stack_t *head;
 void ac_check(int ac);
 void av_check(char *av);
 void malloc_fail(void);
-void invalid_instruction(int, char*);
-int file_size(char *);
-char **read_in(char *);
-void validator(char *, int line_number);
+void switch_mode(stack_s **head, int data, int *flag);
+instruction_t (*get_op_code(char *opcode))(stack_s **head, unsigned int num);
+void instrction_caller(char *, unsigned int, stack_s **, int, int *);
+/* data structure helpers  */
+stack_s *add_begining(stack_s **head, int data);
+stack_s *add_end(stack_s **head, int data);
+void remove_top(stack_s **head);
+int remove_end(stack_s **head);
+stack_s *get_node_end(stack_s **head);
+void print_top(stack_s **head, int num);
+void print_list(stack_s **head);
+void swap_tops(stack_s **head, unsigned int num);
+void chr_top(stack_s **head, unsigned int num);
+void str_top(stack_s **head, unsigned int num);
+void add_tops(stack_s **head, unsigned int num);
+void sub_tops(stack_s **head, unsigned int num);
+void div_tops(stack_s **head, unsigned int num);
+void mul_tops(stack_s **head, unsigned int num);
+void mod_tops(stack_s **head, unsigned int num);
+void rot_lft(stack_s **head, unsigned int num);
+void rot_rgt(stack_s **head, unsigned int num);
 void push(int);
-/*place holders until functions are complete*/
-void pall(void);
-void pint(void);
-void pop(void);
-void swap(void);
-void add(void);
-void nop(void);
-void sub(void);
-void div(void);
-void mul(void);
-void mod(void);
-void pchar(void);
-void pstr(void);
-void rotl(void);
-void rotr(void);
+
+
+
 
 #endif
