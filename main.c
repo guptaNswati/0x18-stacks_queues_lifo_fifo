@@ -35,3 +35,4 @@ int main(int ac, char *av[])
 	free(curr_cmd);
 	return (0);
 }
+
