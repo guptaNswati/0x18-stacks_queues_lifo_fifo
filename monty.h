@@ -51,11 +51,11 @@ void instrction_caller(char *, unsigned int, stack_t **, int *);
 /* data structure helpers  */
 stack_t *add_begining(stack_t **head, int data);
 stack_t *add_end(stack_t **head, int data);
-void remove_top(stack_t **head);
+void remove_top(stack_t **head, unsigned int num);
 int remove_end(stack_t **head);
 stack_t *get_node_end(stack_t **head);
-void print_top(stack_t **head, int num);
-void print_list(stack_t **head);
+void print_top(stack_t **head, unsigned int num);
+void print_list(stack_t **head, unsigned int num);
 void swap_tops(stack_t **head, unsigned int num);
 void chr_top(stack_t **head, unsigned int num);
 void str_top(stack_t **head, unsigned int num);

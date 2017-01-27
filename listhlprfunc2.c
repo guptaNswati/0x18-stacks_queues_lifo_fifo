@@ -26,7 +26,7 @@ stack_t *get_node_end(stack_t **head)
 * @num: line number of opcode
 * Return: nothing
 **/
-void print_top(stack_t **head, int num)
+void print_top(stack_t **head, unsigned int num)
 {
 
 	if (*head)
@@ -42,9 +42,10 @@ void print_top(stack_t **head, int num)
 * @head: pointer to head pointer to stack_t list
 * Return: nothing
 **/
-void print_list(stack_t **head)
+void print_list(stack_t **head, unsigned int num)
 {
 	stack_t *tmp;
+	(void)num;
 
 	if (!(head || *head))
 		return;

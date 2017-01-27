@@ -63,9 +63,10 @@ stack_t *add_end(stack_t **head, int data)
 * @head: pointer to head pointer of the list
 * Return: nothing
 **/
-void remove_top(stack_t **head)
+void remove_top(stack_t **head, unsigned int num)
 {
 	stack_t *tmp;
+	void(num);
 
 	if (!(*head || head))
 		return;
