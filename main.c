@@ -11,7 +11,10 @@ int main(int ac, char *av[])
 {
 	FILE *f;
 	size_t n = 0, line = 1;
-	char *cmd = NULL, *curr_cmd, *push_arg, flag = 0;
+	char *cmd = NULL, *curr_cmd, *push_arg;
+	int flag = 0;
+	stack_t *head = NULL;
+
 	/* Checks if argcount is valid and file can be opened  */
 	ac_check(ac);
 	av_check(av[1]);
