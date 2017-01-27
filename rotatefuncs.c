@@ -6,7 +6,7 @@
 * @num: line number of opcode
 * Return: nothing
 **/
-void rot_lft(stack_s **head, unsigned int num)
+void rot_lft(stack_t **head, unsigned int num)
 {
 	int data;
 
@@ -20,12 +20,12 @@ void rot_lft(stack_s **head, unsigned int num)
 }
 
 /**
-* rot_rgt - rotates the last element of stack_s list to top.
+* rot_rgt - rotates the last element of stack_t list to top.
 * @head: pointer to head pointer of list
 * @num: line number of opcode
 * Return: nothing
 **/
-void rot_rgt(stack_s **head, unsigned int num)
+void rot_rgt(stack_t **head, unsigned int num)
 {
 	/* only no or 1 element, nothing to do*/
         if (!(*head || (*head)->next))

@@ -2,16 +2,16 @@
 /* since head will be an extern variable, so may not need to pass*/
 
 /**
-* add_begining - add a new node in the begining of stack_s list.
+* add_begining - add a new node in the begining of stack_t list.
 * @head: pointer to head pointer of the list
 * @data: new node data
 * Return: address of new node
 **/
-stack_s *add_begining(stack_s **head, int data)
+stack_t *add_begining(stack_t **head, int data)
 {
-	stack_s *new;
+	stack_t *new;
 
-	new = malloc(sizeof(stack_s));
+	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 		return (NULL);
 
@@ -24,16 +24,16 @@ stack_s *add_begining(stack_s **head, int data)
 }
 
 /**
-* add_end - add a new node in the end of stack_s list.
+* add_end - add a new node in the end of stack_t list.
 * @head: pointer to head pointer of the list
 * @data: new node data
 * Return: address of new node
 **/
-stack_s *add_end(stack_s **head, int data)
+stack_t *add_end(stack_t **head, int data)
 {
-	stack_s *new, *tmp;
+	stack_t *new, *tmp;
 
-	new = malloc(sizeof(stack_s));
+	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 		return (NULL);
 
@@ -59,13 +59,13 @@ stack_s *add_end(stack_s **head, int data)
 }
 
 /**
-* remove_begining - removes a node from the begining of the stack_s list.
+* remove_begining - removes a node from the begining of the stack_t list.
 * @head: pointer to head pointer of the list
 * Return: nothing
 **/
-void remove_top(stack_s **head)
+void remove_top(stack_t **head)
 {
-	stack_s *tmp;
+	stack_t *tmp;
 
 	if (!(*head || head))
 		return;
@@ -79,13 +79,13 @@ void remove_top(stack_s **head)
 }
 
 /**
-* remove_end - removes a node from the end of the stack_s list.
+* remove_end - removes a node from the end of the stack_t list.
 * @head: pointer to head pointer of the list
 * Return: value of last node
 **/
-int remove_end(stack_s **head)
+int remove_end(stack_t **head)
 {
-	stack_s *tmp;
+	stack_t *tmp;
 	int value;
 
 	/* function called only when there are more than two elements in list */

@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
-* get_node_end- returns the last node of the stack_s list.
-* @head: pointer to head pointer to stack_s list.
+* get_node_end- returns the last node of the stack_t list.
+* @head: pointer to head pointer to stack_t list.
 * Return: last node of the list
 **/
-stack_s *get_node_end(stack_s **head)
+stack_t *get_node_end(stack_t **head)
 {
-	stack_s *tmp;
+	stack_t *tmp;
 
 	if (!head || !(*head))
 		return (NULL);
@@ -21,12 +21,12 @@ stack_s *get_node_end(stack_s **head)
 }
 
 /**
-* print_top - prints top element of the stack_s list.
-* @head: pointer to head pointer to stack_s list
+* print_top - prints top element of the stack_t list.
+* @head: pointer to head pointer to stack_t list
 * @num: line number of opcode
 * Return: nothing
 **/
-void print_top(stack_s **head, int num)
+void print_top(stack_t **head, int num)
 {
 
 	if (*head)
@@ -38,13 +38,13 @@ void print_top(stack_s **head, int num)
 
 
 /**
-* print_list - prints stack_s list.
-* @head: pointer to head pointer to stack_s list
+* print_list - prints stack_t list.
+* @head: pointer to head pointer to stack_t list
 * Return: nothing
 **/
-void print_list(stack_s **head)
+void print_list(stack_t **head)
 {
-	stack_s *tmp;
+	stack_t *tmp;
 
 	if (!(head || *head))
 		return;

@@ -1,15 +1,15 @@
 #include "monty.h"
 
 /**
-* add_tops - adds the top two elements of the stack_s list if list is
+* add_tops - adds the top two elements of the stack_t list if list is
 * two elements or long and stores result in second top, removes top.
-* @head: pointer to head pointer of stack_s list.
+* @head: pointer to head pointer of stack_t list.
 * @num: line number of opcode
 * Return: nothing
 **/
-void add_tops(stack_s **head, unsigned int num)
+void add_tops(stack_t **head, unsigned int num)
 {
-	stack_s *tmp;
+	stack_t *tmp;
 
 	if (!(*head || head || (*head)->next))
 	{
@@ -24,16 +24,16 @@ void add_tops(stack_s **head, unsigned int num)
 }
 
 /**
-* sub_tops - subtracts the top element from second top element of the stack_s
+* sub_tops - subtracts the top element from second top element of the stack_t
 * list if its two elements or long, stores result in second and removes top.
 * two elements or long.
-* @head: pointer to head pointer of stack_s list.
+* @head: pointer to head pointer of stack_t list.
 * @num: line number of opcode
 * Return: nothing
 **/
-void sub_tops(stack_s **head, unsigned int num)
+void sub_tops(stack_t **head, unsigned int num)
 {
-	stack_s *tmp;
+	stack_t *tmp;
 
 	if (!(*head || head || (*head)->next))
 	{
@@ -48,16 +48,16 @@ void sub_tops(stack_s **head, unsigned int num)
 }
 
 /**
-* div_tops - divides second top two element by top element of the stack_s list,
+* div_tops - divides second top two element by top element of the stack_t list,
 * if its two elemets or long, stores result in second and removes top.
 * two elements or long.
-* @head: pointer to head pointer of stack_s list.
+* @head: pointer to head pointer of stack_t list.
 * @num: line number of opcode
 * Return: nothing
 **/
-void div_tops(stack_s **head, unsigned int num)
+void div_tops(stack_t **head, unsigned int num)
 {
-	stack_s *tmp;
+	stack_t *tmp;
 
 	if (!(*head || head || (*head)->next))
 	{
@@ -77,15 +77,15 @@ void div_tops(stack_s **head, unsigned int num)
 }
 
 /**
-* mul_tops - multiplies the top two elements of the stack_s list if list is
+* mul_tops - multiplies the top two elements of the stack_t list if list is
 * two elements or long, stores result in second and removes top.
-* @head: pointer to head pointer of stack_s list.
+* @head: pointer to head pointer of stack_t list.
 * @num: line number of opcode
 * Return: nothing
 **/
-void mul_tops(stack_s **head, unsigned int num)
+void mul_tops(stack_t **head, unsigned int num)
 {
-	stack_s *tmp;
+	stack_t *tmp;
 
 	if (!(*head || head || (*head)->next))
 	{
@@ -100,16 +100,16 @@ void mul_tops(stack_s **head, unsigned int num)
 }
 
 /**
-* mod_tops - calculates the mod of top two elements of the stack_s list if,
+* mod_tops - calculates the mod of top two elements of the stack_t list if,
 * list is two elements or long, stores result in second and removes top.
 * two elements or long.
-* @head: pointer to head pointer of stack_s list.
+* @head: pointer to head pointer of stack_t list.
 * @num: line number of opcode
 * Return: nothing
 **/
-void mod_tops(stack_s **head, unsigned int num)
+void mod_tops(stack_t **head, unsigned int num)
 {
-	stack_s *tmp;
+	stack_t *tmp;
 
 	if (!(*head || head || (*head)->next))
 	{

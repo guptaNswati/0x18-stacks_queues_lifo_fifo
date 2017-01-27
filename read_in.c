@@ -7,7 +7,7 @@
 * @flag: indicator of stack or queue mode
 * Return: nothing
 **/
-void push(stack_s **head, int data, int *flag)
+void push(stack_t **head, int data, int *flag)
 {
 	/* if flag is on, list mode is in queue */
 	if (*(flag) == 1)
@@ -21,7 +21,7 @@ void push(stack_s **head, int data, int *flag)
 * @opcode: function to search for
 * Return: pointer to valid function or null
 **/
-instruction_t (*get_op_code(char *opcode))(stack_s **head, unsigned int num)
+instruction_t (*get_op_code(char *opcode))(stack_t **head, unsigned int num)
 {
 	instruction_t instructs[] = {
 		{"pall", print_list},
@@ -58,10 +58,10 @@ instruction_t (*get_op_code(char *opcode))(stack_s **head, unsigned int num)
 * @flag: pointer to int for switching between stack and queue
 * Return: nothing
 **/
-void instrction_caller(char *opcode, unsigned int num, stack_s **head,
+void instrction_caller(char *opcode, unsigned int num, stack_t **head,
 		       int *flag)
 {
-	instruction_t (*func)(stack_s **, unsigned int);
+	instruction_t (*func)(stack_t **, unsigned int);
 
 	if (strcmp(opcode, "stack") == 0)
 		*(flag) = 0;

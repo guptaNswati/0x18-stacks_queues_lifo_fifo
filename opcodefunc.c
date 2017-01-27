@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
-* swap_tops - swaps the top two elements of the stack_s list if list is
+* swap_tops - swaps the top two elements of the stack_t list if list is
 * two elements or long.
-* @head: pointer to head pointer of stack_s list.
+* @head: pointer to head pointer of stack_t list.
 * @num: line number of opcode
 * Return: nothing
 **/
-void swap_tops(stack_s **head, unsigned int num)
+void swap_tops(stack_t **head, unsigned int num)
 {
 	int tmp;
 
@@ -22,13 +22,13 @@ void swap_tops(stack_s **head, unsigned int num)
 }
 
 /**
-* chr_top - prints the char at the top of the stack_s list if its in ascii range
+* chr_top - prints the char at the top of the stack_t list if its in ascii range
 * and list is not empty.
 * @head: pointer to head pointer of list
 * @num: line number of opcode
 * Return: nothing
 **/
-void chr_top(stack_s **head, unsigned int num)
+void chr_top(stack_t **head, unsigned int num)
 {
 	if (!(*head || head))
 	{
@@ -44,15 +44,15 @@ void chr_top(stack_s **head, unsigned int num)
 }
 
 /**
-* str_top - prints the string starting at the top of the stack_s list, if
+* str_top - prints the string starting at the top of the stack_t list, if
 * its not empty and values are in ascii range.
 * @head: pointer to head pointer of list
 * @num: line number of opcode
 * Return: nothing
 **/
-void str_top(stack_s **head, unsigned int num)
+void str_top(stack_t **head, unsigned int num)
 {
-	stack_s *tmp;
+	stack_t *tmp;
 
 	if (*head)
 	{

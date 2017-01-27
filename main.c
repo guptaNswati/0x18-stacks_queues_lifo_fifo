@@ -11,8 +11,7 @@ int main(int ac, char *av[])
 {
 	FILE *f;
 	size_t n = 0, line = 1;
-	char *cmd = NULL, *curr_cmd, *push_arg;
-	int flag = 0;
+	char *cmd = NULL, *curr_cmd, *push_arg, flag = 0;
 	/* Checks if argcount is valid and file can be opened  */
 	ac_check(ac);
 	av_check(av[1]);
@@ -30,7 +29,7 @@ int main(int ac, char *av[])
 		else if (curr_cmd[0] == '#' || strcmp(curr_cmd[0], "nop") == 0)
 			continue;
 		else
-			/* checks if given arg is a valid instruction or not  */
+			/* checks if given arg is a valid instruction or not*/
 			instrction_caller(curr_cmd, line, &head, &flag);
 		line++;
 	}

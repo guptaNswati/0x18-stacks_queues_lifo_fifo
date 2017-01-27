@@ -11,7 +11,7 @@
 #include <string.h>
 
 /**
-* struct stack_s - doubly linked list representation of a stack (or queue)
+* struct stack_t - doubly linked list representation of a stack (or queue)
 * @n: integer
 * @prev: points to the previous element of the stack (or queue)
 * @next: points to the next element of the stack (or queue)
@@ -22,8 +22,8 @@
 typedef struct stack_s
 {
         int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+        struct stack_t *prev;
+        struct stack_t *next;
 } stack_t;
 
 
@@ -47,27 +47,27 @@ extern stack_t *head;
 void ac_check(int ac);
 void av_check(char *av);
 void malloc_fail(void);
-void push(stack_s **head, int data, int *flag);
-instruction_t (*get_op_code(char *opcode))(stack_s **head, unsigned int num);
-void instrction_caller(char *, unsigned int, stack_s **, int, int *);
+void push(stack_t **head, int data, int *flag);
+instruction_t (*get_op_code(char *opcode))(stack_t **head, unsigned int num);
+void instrction_caller(char *, unsigned int, stack_t **, int, int *);
 /* data structure helpers  */
-stack_s *add_begining(stack_s **head, int data);
-stack_s *add_end(stack_s **head, int data);
-void remove_top(stack_s **head);
-int remove_end(stack_s **head);
-stack_s *get_node_end(stack_s **head);
-void print_top(stack_s **head, int num);
-void print_list(stack_s **head);
-void swap_tops(stack_s **head, unsigned int num);
-void chr_top(stack_s **head, unsigned int num);
-void str_top(stack_s **head, unsigned int num);
-void add_tops(stack_s **head, unsigned int num);
-void sub_tops(stack_s **head, unsigned int num);
-void div_tops(stack_s **head, unsigned int num);
-void mul_tops(stack_s **head, unsigned int num);
-void mod_tops(stack_s **head, unsigned int num);
-void rot_lft(stack_s **head, unsigned int num);
-void rot_rgt(stack_s **head, unsigned int num);
+stack_t *add_begining(stack_t **head, int data);
+stack_t *add_end(stack_t **head, int data);
+void remove_top(stack_t **head);
+int remove_end(stack_t **head);
+stack_t *get_node_end(stack_t **head);
+void print_top(stack_t **head, int num);
+void print_list(stack_t **head);
+void swap_tops(stack_t **head, unsigned int num);
+void chr_top(stack_t **head, unsigned int num);
+void str_top(stack_t **head, unsigned int num);
+void add_tops(stack_t **head, unsigned int num);
+void sub_tops(stack_t **head, unsigned int num);
+void div_tops(stack_t **head, unsigned int num);
+void mul_tops(stack_t **head, unsigned int num);
+void mod_tops(stack_t **head, unsigned int num);
+void rot_lft(stack_t **head, unsigned int num);
+void rot_rgt(stack_t **head, unsigned int num);
 
 
 
