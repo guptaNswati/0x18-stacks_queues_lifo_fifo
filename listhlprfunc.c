@@ -18,7 +18,7 @@ stack_t *add_begining(stack_t **head, int data)
 	new->n = data;
 	new->prev = NULL;
 	new->next = *head;
-	*head->prev = new;
+	(*head)->prev = new;
 	*head = new;
 	return (new);
 }

@@ -29,11 +29,13 @@ int main(int ac, char *av[])
 			printf("%s\n", push_arg);
 			push(&head, push_arg, &flag);
 		}
-		else if (curr_cmd[0] == '#' || strcmp(curr_cmd[0], "nop") == 0)
+		else if (curr_cmd[0] == '#' || strcmp(curr_cmd, "nop") == 0)
 			continue;
 		else
+		{
 			/* checks if given arg is a valid instruction or not*/
 			instrction_caller(curr_cmd, line, &head, &flag);
+		}
 		line++;
 	}
 	free(cmd);

@@ -17,7 +17,7 @@ void add_tops(stack_t **head, unsigned int num)
 		exit(EXIT_FAILURE);
 	}
 	tmp = *head;
-	*head = *head->next;
+	*head = (*head)->next;
 	(*head)->prev = NULL;
 	(*head)->n += tmp->n;
 	free(tmp);
@@ -41,7 +41,7 @@ void sub_tops(stack_t **head, unsigned int num)
 		exit(EXIT_FAILURE);
 	}
 	tmp = *head;
-	*head = *head->next;
+	*head = (*head)->next;
 	(*head)->prev = NULL;
 	(*head)->n -= tmp->n;
 	free(tmp);
@@ -70,7 +70,7 @@ void div_tops(stack_t **head, unsigned int num)
 		exit(EXIT_FAILURE);
 	}
 	tmp = *head;
-	*head = *head->next;
+	*head = (*head)->next;
 	(*head)->prev = NULL;
 	(*head)->n /= tmp->n;
 	free(tmp);
@@ -93,7 +93,7 @@ void mul_tops(stack_t **head, unsigned int num)
 		exit(EXIT_FAILURE);
 	}
 	tmp = *head;
-	*head = *head->next;
+	*head = (*head)->next;
 	(*head)->prev = NULL;
 	(*head)->n *= tmp->n;
 	free(tmp);

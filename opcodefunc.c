@@ -17,7 +17,7 @@ void swap_tops(stack_t **head, unsigned int num)
 		exit(EXIT_FAILURE);
 	}
 	tmp = (*head)->n;
-	(*head)->n = *head->next->n;
+	(*head)->n = (*head)->next->n;
 	(*head)->next->n = tmp;
 }
 
