@@ -45,7 +45,7 @@ typedef struct instruction_s
 void ac_check(int ac);
 void av_check(char *av);
 void malloc_fail(void);
-void push(stack_t **head, int data, int *flag);
+void push(stack_t **head, char *data, int *flag);
 instruction_t (*get_op_code(char *opcode))(stack_t **head, unsigned int num);
 void instrction_caller(char *, unsigned int, stack_t **, int, int *);
 /* data structure helpers  */

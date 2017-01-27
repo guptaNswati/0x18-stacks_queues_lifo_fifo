@@ -9,15 +9,11 @@
 **/
 void push(stack_t **head, char *data, int *flag)
 {
-	int value;
-
-	if data[0] == '0';
-	value = atoi(data);
 	/* if flag is on, list mode is in queue */
 	if (*(flag) == 1)
-		add_end(head, data);
+		add_end(head, atoi(data));
 	else /* stack mode */
-		add_begining(head, data);
+		add_begining(head, atoi(data));
 }
 
 /**
