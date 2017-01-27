@@ -1,13 +1,12 @@
 #include "monty.h"
-/* since head will be an extern variable, so may not need to pass*/
 
 /**
-* add_begining - add a new node in the begining of stack_t list.
+* add_front - add a new node in the begining of stack_t list.
 * @head: pointer to head pointer of the list
 * @data: new node data
 * Return: address of new node
 **/
-stack_t *add_begining(stack_t **head, int data)
+stack_t *add_front(stack_t **head, int data)
 {
 	stack_t *new;
 
@@ -66,7 +65,7 @@ stack_t *add_end(stack_t **head, int data)
 void remove_top(stack_t **head, unsigned int num)
 {
 	stack_t *tmp;
-	void(num);
+	(void)num;
 
 	if (!(*head || head))
 		return;

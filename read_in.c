@@ -13,7 +13,7 @@ void push(stack_t **head, char *data, int *flag)
 	if (*(flag) == 1)
 		add_end(head, atoi(data));
 	else /* stack mode */
-		add_begining(head, atoi(data));
+		add_front(head, atoi(data));
 }
 
 /**
@@ -21,7 +21,7 @@ void push(stack_t **head, char *data, int *flag)
 * @opcode: function to search for
 * Return: pointer to valid function or null
 **/
-instruction_t (*get_op_code(char *opcode))(stack_t **head, unsigned int num)
+void (*get_op_code(char *cmd))(stack_t **head, unsigned int num)
 {
 	instruction_t instructs[] = {
 		{"pall", print_list},
@@ -41,9 +41,10 @@ instruction_t (*get_op_code(char *opcode))(stack_t **head, unsigned int num)
 	};
 	int i;
 
-	for (i = 0; i < 13;i++)
+	cmd = strtok(cmd, "\n");
+	for (i = 0; i < 14; i++)
 	{
-		if (strcmp(instructs[i].opcode, opcode) == 0)
+		if (strcmp(cmd, instructs[i].opcode) == 0)
 			return (instructs[i].f);
 	}
 	return (NULL);
@@ -54,14 +55,13 @@ instruction_t (*get_op_code(char *opcode))(stack_t **head, unsigned int num)
 * @opcode: pointer to instruction
 * @num: opcode line number
 * @head: pointer to head pointer of stack_s list
-* @data: value of the new node
 * @flag: pointer to int for switching between stack and queue
 * Return: nothing
 **/
 void instrction_caller(char *opcode, unsigned int num, stack_t **head,
 		       int *flag)
 {
-	instruction_t (*func)(stack_t **, unsigned int);
+	void (*f)(stack_t **, unsigned int);
 
 	if (strcmp(opcode, "stack") == 0)
 		*(flag) = 0;
@@ -69,9 +69,9 @@ void instrction_caller(char *opcode, unsigned int num, stack_t **head,
 		*(flag) = 1;
 	else
 	{
-		func = get_op_code(opcode);
-		if (func)
-			func(head, num);
+		f = get_op_code(opcode);
+		if (f)
+			f(head, num);
 		else
 		{
 			printf("L%d: unknown instruction %s\n", num,

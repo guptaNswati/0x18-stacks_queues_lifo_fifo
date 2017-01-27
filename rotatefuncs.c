@@ -9,6 +9,7 @@
 void rot_lft(stack_t **head, unsigned int num)
 {
 	int data;
+	(void)num;
 
 	/* only no or 1 element, nothing to do*/
 	if (!(*head || (*head)->next))
@@ -27,8 +28,9 @@ void rot_lft(stack_t **head, unsigned int num)
 **/
 void rot_rgt(stack_t **head, unsigned int num)
 {
+	(void)num;
 	/* only no or 1 element, nothing to do*/
         if (!(*head || (*head)->next))
                 return;
-	add_begining(head, remove_end(head));
+	add_front(head, remove_end(head));
 }

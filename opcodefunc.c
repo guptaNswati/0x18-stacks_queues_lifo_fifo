@@ -53,6 +53,7 @@ void chr_top(stack_t **head, unsigned int num)
 void str_top(stack_t **head, unsigned int num)
 {
 	stack_t *tmp;
+	(void)num;
 
 	if (*head)
 	{

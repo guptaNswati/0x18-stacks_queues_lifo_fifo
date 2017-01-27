@@ -38,7 +38,7 @@ int main(int ac, char *av[])
 		}
 		line++;
 	}
-	free(cmd);
-	free(curr_cmd);
+/*	free(cmd);
+	free(curr_cmd); */
 	return (0);
 }
