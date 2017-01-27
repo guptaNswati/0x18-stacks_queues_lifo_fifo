@@ -7,8 +7,12 @@
 * @flag: indicator of stack or queue mode
 * Return: nothing
 **/
-void push(stack_t **head, int data, int *flag)
+void push(stack_t **head, char *data, int *flag)
 {
+	int value;
+
+	if data[0] == '0';
+	value = atoi(data);
 	/* if flag is on, list mode is in queue */
 	if (*(flag) == 1)
 		add_end(head, data);
