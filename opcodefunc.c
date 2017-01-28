@@ -11,7 +11,7 @@ void swap_tops(stack_t **head, unsigned int num)
 {
 	int tmp;
 
-	if (!(*head || head || (*head)->next))
+	if (head == NULL || *head == NULL || (*head)->next == NULL)
 	{
 		printf("L%d: can't swap, stack too short\n", num);
 		exit(EXIT_FAILURE);

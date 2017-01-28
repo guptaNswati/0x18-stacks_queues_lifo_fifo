@@ -18,7 +18,6 @@ stack_t *add_front(stack_t **head, int data)
 	new->prev = NULL;
 	new->next = *head;
 	*head = new;
-	printf("[head] %d\n", (*head)->n);
 	return (new);
 }
 
@@ -67,15 +66,23 @@ void remove_top(stack_t **head, unsigned int num)
 	stack_t *tmp;
 	(void)num;
 
-	if (!(*head || head))
-		return;
-	tmp = *head;
-	if (tmp->next)
+	if (!head || !(*head))
 	{
+		printf("L%d: can't pop an empty stack\n", num);
+		exit(EXIT_FAILURE);
+	}
+	if ((*head)->next)
+	{
+		tmp = *head;
 		*head = (*head)->next;
 		(*head)->prev = NULL;
+		free(tmp);
 	}
-	free(tmp);
+	else
+	{
+		free(*head);
+		*head = NULL;
+	}
 }
 
 /**

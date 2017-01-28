@@ -28,12 +28,15 @@ stack_t *get_node_end(stack_t **head)
 **/
 void print_top(stack_t **head, unsigned int num)
 {
+	(void)num;
 
 	if (*head)
 		printf("%d\n", (*head)->n);
 	else
+	{
 		printf("L%d: can't print, stack empty\n", num);
 		exit(EXIT_FAILURE);
+	}
 }
 
 
