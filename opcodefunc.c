@@ -22,7 +22,7 @@ void swap_tops(stack_t **head, unsigned int num)
 }
 
 /**
-* chr_top - prints the char at the top of the stack_t list if its in ascii range
+* chr_top - prints the char at  top of the stack_t list if its in ascii range
 * and list is not empty.
 * @head: pointer to head pointer of list
 * @num: line number of opcode

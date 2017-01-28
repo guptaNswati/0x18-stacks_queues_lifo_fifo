@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
-* switch_mode - switches adding to list to stack or queue mode
+* push - executes a PUSH depending on mode (stack or queue mode)
 * @head: pointer to head pointer of list
 * @data: data for new node
 * @flag: indicator of stack or queue mode
@@ -18,7 +18,7 @@ void push(stack_t **head, char *data, int *flag)
 
 /**
 * get_op_code - finds a valid opcode
-* @opcode: function to search for
+* @cmd: function to search for
 * Return: pointer to valid function or null
 **/
 void (*get_op_code(char *cmd))(stack_t **head, unsigned int num)
