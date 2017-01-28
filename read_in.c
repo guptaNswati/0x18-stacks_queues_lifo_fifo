@@ -41,10 +41,12 @@ void (*get_op_code(char *cmd))(stack_t **head, unsigned int num)
 	};
 	int i;
 
-	for (i = 0; i < 14; i++)
+	for (i = 0; i < 13; i++)
 	{
 		if (strcmp(cmd, instructs[i].opcode) == 0)
+		{
 			return (instructs[i].f);
+		}
 	}
 	return (NULL);
 }
@@ -69,7 +71,7 @@ void instrction_caller(char *opcode, unsigned int num, stack_t **head,
 	else
 	{
 		f = get_op_code(opcode);
-		if (f)
+		if (f != NULL)
 			f(head, num);
 		else
 		{
