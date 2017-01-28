@@ -11,7 +11,7 @@ void swap_tops(stack_t **head, unsigned int num)
 {
 	int tmp;
 
-	if (head == NULL || *head == NULL || (*head)->next == NULL)
+	if (!head || !(*head) || !(*head)->next)
 	{
 		printf("L%d: can't swap, stack too short\n", num);
 		exit(EXIT_FAILURE);
@@ -30,7 +30,7 @@ void swap_tops(stack_t **head, unsigned int num)
 **/
 void chr_top(stack_t **head, unsigned int num)
 {
-	if (!(*head || head))
+	if (!head || !(*head))
 	{
 		printf("L%d: can't pchar, stack empty\n", num);
 		exit(EXIT_FAILURE);
