@@ -5,11 +5,11 @@
  * @head: pointer to beginning of list
  * Return: void
  */
-void freelist(stack_t *head)
+void freelist(stack_t **head)
 {
-	stack_t *curr = head, *prev;
+	stack_t *curr = *head, *prev;
 
-	if (head == NULL)
+	if (*head == NULL)
 		return;
 	while (curr->prev != NULL)
 		curr = curr->prev;
@@ -21,7 +21,7 @@ void freelist(stack_t *head)
 		free(prev);
 	}
 	free(curr);
-	head = NULL;
+	*head = NULL;
 }
 
 

@@ -7,9 +7,19 @@
 * @flag: indicator of stack or queue mode
 * Return: nothing
 **/
-void push(stack_t **head, char *data, int *flag)
+void push(stack_t **head, char *data, int *flag, unsigned int num)
 {
-	/* if flag is on, list mode is in queue */
+	int i = 0;
+
+	for (i = 0; data[i] != '\0'; i++)
+	{
+		if (data[i] < '0' || data[i] > '9')
+		{
+			printf("L%d: usage: push integer\n", num);
+			freelist(head);
+			exit(EXIT_FAILURE);
+		}
+	}
 	if (*(flag) == 1)
 		add_end(head, atoi(data));
 	else /* stack mode */
