@@ -5,6 +5,7 @@
 * @head: pointer to head pointer of list
 * @data: data for new node
 * @flag: indicator of stack or queue mode
+* @num: line number in monty file for error handling
 * Return: nothing
 **/
 void push(stack_t **head, char *data, int *flag, unsigned int num)
