@@ -10,9 +10,9 @@
 **/
 void push(stack_t **head, char *data, int *flag, unsigned int num)
 {
-	int i = 0;
+	int i = 0, length = strlen(data);
 
-	for (i = 0; data[i] != '\0'; i++)
+	for (i = 0; i < length; i++)
 	{
 		if (data[i] < '0' || data[i] > '9')
 		{

@@ -24,7 +24,7 @@ int main(int ac, char *av[])
 		curr_cmd = strtok(cmd, " \n");
 		if (strcmp(curr_cmd, "push") == 0)
 		{
-			push_arg = strtok(NULL, " ");
+			push_arg = strtok(NULL, " \n");
 			push(&head, push_arg, &flag, line);
 		}
 		else if (curr_cmd[0] == '#' || strcmp(curr_cmd, "nop") == 0)
