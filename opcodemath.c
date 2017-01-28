@@ -11,7 +11,7 @@ void add_tops(stack_t **head, unsigned int num)
 {
 	stack_t *tmp;
 
-	if (!(*head || head || (*head)->next))
+	if (!head || !(*head) || !(*head)->next)
 	{
 		printf("L%d: can't add, stack too short\n", num);
 		exit(EXIT_FAILURE);
@@ -35,7 +35,7 @@ void sub_tops(stack_t **head, unsigned int num)
 {
 	stack_t *tmp;
 
-	if (!(*head || head || (*head)->next))
+	if (!head || !(*head) || !(*head)->next)
 	{
 		printf("L%d: can't sub, stack too short\n", num);
 		exit(EXIT_FAILURE);
@@ -59,7 +59,7 @@ void div_tops(stack_t **head, unsigned int num)
 {
 	stack_t *tmp;
 
-	if (!(*head || head || (*head)->next))
+	if (!head || !(*head) || !(*head)->next)
 	{
 		printf("L%d: can't div, stack too short\n", num);
 		exit(EXIT_FAILURE);
@@ -87,7 +87,7 @@ void mul_tops(stack_t **head, unsigned int num)
 {
 	stack_t *tmp;
 
-	if (!(*head || head || (*head)->next))
+	if (!head || !(*head) || !(*head)->next)
 	{
 		printf("L%d: can't mul, stack too short\n", num);
 		exit(EXIT_FAILURE);
@@ -111,7 +111,7 @@ void mod_tops(stack_t **head, unsigned int num)
 {
 	stack_t *tmp;
 
-	if (!(*head || head || (*head)->next))
+	if (!head || !(*head) || !(*head)->next)
 	{
 		printf("L%d: can't mod, stack too short\n", num);
 		exit(EXIT_FAILURE);

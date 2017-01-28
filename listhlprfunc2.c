@@ -50,7 +50,7 @@ void print_list(stack_t **head, unsigned int num)
 	stack_t *tmp;
 	(void)num;
 
-	if (!(head || *head))
+	if (!head || !(*head))
 		return;
 	tmp = *head;
 	while (tmp)
