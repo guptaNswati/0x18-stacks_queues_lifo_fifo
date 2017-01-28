@@ -21,12 +21,10 @@ int main(int ac, char *av[])
 	f = fopen(av[1], "r");
 	while (-1 != getline(&cmd, &n, f))
 	{
-		curr_cmd = strtok(cmd, " ");
-		printf("%s\n", curr_cmd);
+		curr_cmd = strtok(cmd, " \n");
 		if (strcmp(curr_cmd, "push") == 0)
 		{
 			push_arg = strtok(NULL, " ");
-			printf("%s\n", push_arg);
 			push(&head, push_arg, &flag);
 		}
 		else if (curr_cmd[0] == '#' || strcmp(curr_cmd, "nop") == 0)

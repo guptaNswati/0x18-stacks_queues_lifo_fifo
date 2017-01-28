@@ -41,7 +41,6 @@ void (*get_op_code(char *cmd))(stack_t **head, unsigned int num)
 	};
 	int i;
 
-	cmd = strtok(cmd, "\n");
 	for (i = 0; i < 14; i++)
 	{
 		if (strcmp(cmd, instructs[i].opcode) == 0)

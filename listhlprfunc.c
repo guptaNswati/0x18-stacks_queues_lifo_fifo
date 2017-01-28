@@ -17,8 +17,8 @@ stack_t *add_front(stack_t **head, int data)
 	new->n = data;
 	new->prev = NULL;
 	new->next = *head;
-	(*head)->prev = new;
 	*head = new;
+	printf("[head] %d\n", (*head)->n);
 	return (new);
 }
 
