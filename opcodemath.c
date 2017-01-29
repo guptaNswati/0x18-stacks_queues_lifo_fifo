@@ -14,6 +14,7 @@ void add_tops(stack_t **head, unsigned int num)
 	if (!head || !(*head) || !(*head)->next)
 	{
 		printf("L%d: can't add, stack too short\n", num);
+		freelist(head);
 		exit(EXIT_FAILURE);
 	}
 	tmp = *head;
