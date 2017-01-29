@@ -43,6 +43,7 @@ void chr_top(stack_t **head, unsigned int num)
 	if ((*head)->n < 0 || (*head)->n > 127)
 	{
 		printf("L%d: can't pchar, value out of range\n", num);
+		freelist(head);
 		exit(EXIT_FAILURE);
 	}
 	printf("%c\n", (*head)->n);

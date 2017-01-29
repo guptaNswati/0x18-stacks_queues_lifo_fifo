@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 push 10
 push 11
 swap
@@ -35,9 +34,4 @@ push 73
 pstr
 pall
 div
-=======
-push 1
-push 2
-push 3
->>>>>>> e6cba78bde6fdaf1f940b5aafaff48d976b94c4f
 pall

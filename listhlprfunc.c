@@ -12,8 +12,11 @@ stack_t *add_front(stack_t **head, int data)
 
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
-		return (NULL);
-
+	{
+		printf("Error: malloc failed\n");
+		freelist(head);
+		exit(EXIT_FAILURE);
+	}
 	new->n = data;
 	new->prev = NULL;
 	new->next = *head;
@@ -33,8 +36,11 @@ stack_t *add_end(stack_t **head, int data)
 
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
-		return (NULL);
-
+	{
+		printf("Error: malloc failed\n");
+		freelist(head);
+		exit(EXIT_FAILURE);
+	}
 	new->n = data;
 	new->prev = NULL;
 	new->next = NULL;

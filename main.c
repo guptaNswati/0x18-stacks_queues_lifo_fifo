@@ -36,7 +36,15 @@ int main(int ac, char *av[])
 		else
 		{
 			/* checks if given arg is a valid instruction or not*/
-			instrction_caller(curr_cmd, line, &head, &flag);
+			if (instrction_caller(curr_cmd, line, &head, &flag)
+			    == 0)
+			{
+				printf("L%d: unknown instruction %s\n",
+				       (int)line, curr_cmd);
+				freelist(&head), free(cmd), free(curr_cmd);
+				free(push_arg);
+				exit(EXIT_FAILURE);
+			}
 		}
 		line++;
 	}
