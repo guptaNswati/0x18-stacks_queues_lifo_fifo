@@ -29,7 +29,7 @@ int main(int ac, char *av[])
 		}
 		if (strcmp(curr_cmd, "push") == 0)
 		{
-			push_arg = strtok(NULL, " \n");
+			push_arg = strtok(NULL, " \t\r\n\v\f");
 			push(&head, push_arg, &flag, line);
 		}
 		else
