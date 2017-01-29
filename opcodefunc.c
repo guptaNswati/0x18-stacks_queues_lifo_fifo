@@ -55,7 +55,7 @@ void str_top(stack_t **head, unsigned int num)
 	stack_t *tmp;
 	(void)num;
 
-	if (*head)
+	if (*head != NULL)
 	{
 		tmp = *head;
 		while (tmp && (tmp->n > 0 && tmp->n < 128))
