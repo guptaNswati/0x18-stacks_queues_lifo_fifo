@@ -41,13 +41,26 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+* struct save_mem - define a struct for saving refernces to allocated memory
+* @loc: address of memory area
+* @next: pointer to next memory area
+**/
+typedef struct save_mem
+{
+	void *loc;
+	struct save_mem *next;
+} save_mem;
+
+extern save_mem *mem_head;
+
 /** FUNCTION PROTOTYPES **/
 void ac_check(int ac);
 void av_check(char *av);
 void malloc_fail(void);
 void push(stack_t **head, char *data, int *flag, unsigned int num);
 void (*get_op_code(char *opcode))(stack_t **head, unsigned int num);
-int instrction_caller(char *, unsigned int, stack_t **, int *);
+void instrction_caller(char *, unsigned int, stack_t **, int *);
 
 /* data structure helpers  */
 void freelist(stack_t **head);
