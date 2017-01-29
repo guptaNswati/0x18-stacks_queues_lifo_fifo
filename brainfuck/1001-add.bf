@@ -18,7 +18,7 @@
 <-
 ]
 
-#Moves answer to Cell 0
+
 >
 [
 <+
@@ -42,7 +42,7 @@
 >-
 ]
 <
-#Print answer
+
 .
 > ++++++++++
-. 
+.
