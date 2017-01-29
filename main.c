@@ -22,7 +22,8 @@ int main(int ac, char *av[])
 	while (-1 != getline(&cmd, &n, f))
 	{
 		curr_cmd = strtok(cmd, " \t\r\n\v\f");
-		if (curr_cmd == NULL || curr_cmd[0] == '#')
+		if (curr_cmd == NULL || curr_cmd[0] == '#' ||
+		    strcmp("nop", curr_cmd) == 0)
 		{
 			line++;
 			continue;
