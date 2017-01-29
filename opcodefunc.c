@@ -30,7 +30,7 @@ void swap_tops(stack_t **head, unsigned int num)
 **/
 void chr_top(stack_t **head, unsigned int num)
 {
-	if (!head || !(*head))
+	if (head == NULL || *head == NULL)
 	{
 		printf("L%d: can't pchar, stack empty\n", num);
 		exit(EXIT_FAILURE);
