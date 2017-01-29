@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
-* rot_lft - rotates the top of list by moving it end and shifting second to top.
+* rot_lft - rotates  top of list by moving it end and shifting second to top.
 * @head: pointer to head pointer of list
 * @num: line number of opcode
 * Return: nothing
@@ -30,7 +30,7 @@ void rot_rgt(stack_t **head, unsigned int num)
 {
 	(void)num;
 	/* only no or 1 element, nothing to do*/
-        if (!head || !(*head)->next)
-                return;
+	if (!head || !(*head)->next)
+		return;
 	add_front(head, remove_end(head));
 }

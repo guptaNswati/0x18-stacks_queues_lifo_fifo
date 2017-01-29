@@ -1,15 +1,26 @@
 #include "monty.h"
 
 /**
-* switch_mode - switches adding to list to stack or queue mode
+* push - executes a PUSH depending on mode (stack or queue mode)
 * @head: pointer to head pointer of list
 * @data: data for new node
 * @flag: indicator of stack or queue mode
+* @num: line number in monty file for error handling
 * Return: nothing
 **/
-void push(stack_t **head, char *data, int *flag)
+void push(stack_t **head, char *data, int *flag, unsigned int num)
 {
-	/* if flag is on, list mode is in queue */
+	int i = 0, length = strlen(data);
+
+	for (i = 0; i < length; i++)
+	{
+		if (data[i] < '0' || data[i] > '9')
+		{
+			printf("L%d: usage: push integer\n", num);
+			freelist(head);
+			exit(EXIT_FAILURE);
+		}
+	}
 	if (*(flag) == 1)
 		add_end(head, atoi(data));
 	else /* stack mode */
@@ -18,7 +29,7 @@ void push(stack_t **head, char *data, int *flag)
 
 /**
 * get_op_code - finds a valid opcode
-* @opcode: function to search for
+* @cmd: function to search for
 * Return: pointer to valid function or null
 **/
 void (*get_op_code(char *cmd))(stack_t **head, unsigned int num)
@@ -41,10 +52,12 @@ void (*get_op_code(char *cmd))(stack_t **head, unsigned int num)
 	};
 	int i;
 
-	for (i = 0; i < 14; i++)
+	for (i = 0; i < 13; i++)
 	{
 		if (strcmp(cmd, instructs[i].opcode) == 0)
+		{
 			return (instructs[i].f);
+		}
 	}
 	return (NULL);
 }
@@ -69,7 +82,7 @@ void instrction_caller(char *opcode, unsigned int num, stack_t **head,
 	else
 	{
 		f = get_op_code(opcode);
-		if (f)
+		if (f != NULL)
 			f(head, num);
 		else
 		{

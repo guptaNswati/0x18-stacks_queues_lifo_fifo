@@ -45,10 +45,12 @@ typedef struct instruction_s
 void ac_check(int ac);
 void av_check(char *av);
 void malloc_fail(void);
-void push(stack_t **head, char *data, int *flag);
+void push(stack_t **head, char *data, int *flag, unsigned int num);
 void (*get_op_code(char *opcode))(stack_t **head, unsigned int num);
 void instrction_caller(char *, unsigned int, stack_t **, int *);
+
 /* data structure helpers  */
+void freelist(stack_t **head);
 stack_t *add_front(stack_t **head, int data);
 stack_t *add_end(stack_t **head, int data);
 void remove_top(stack_t **head, unsigned int num);

@@ -38,7 +38,7 @@ stack_t *add_end(stack_t **head, int data)
 	new->n = data;
 	new->prev = NULL;
 	new->next = NULL;
-	if(!(*head))
+	if (!(*head))
 		*head = new;
 	else if (!(*head)->next)
 	{
@@ -57,8 +57,9 @@ stack_t *add_end(stack_t **head, int data)
 }
 
 /**
-* remove_begining - removes a node from the begining of the stack_t list.
+* remove_top - removes a node from the begining of the stack_t list.
 * @head: pointer to head pointer of the list
+* @num: line number of instruction from monty file
 * Return: nothing
 **/
 void remove_top(stack_t **head, unsigned int num)

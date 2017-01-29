@@ -1,6 +1,31 @@
 #include "monty.h"
 
 /**
+ * freelist - frees doubly linked list
+ * @head: pointer to beginning of list
+ * Return: void
+ */
+void freelist(stack_t **head)
+{
+	stack_t *curr = *head, *prev;
+
+	if (*head == NULL)
+		return;
+	while (curr->prev != NULL)
+		curr = curr->prev;
+	prev = curr->prev;
+	while (curr->next != NULL)
+	{
+		curr = curr->next;
+		prev = curr->prev;
+		free(prev);
+	}
+	free(curr);
+	*head = NULL;
+}
+
+
+/**
  * ac_check - checks if arg count is correct value
  * @ac: count of arguments
  * Return: void

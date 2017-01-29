@@ -27,7 +27,7 @@ void swap_tops(stack_t **head, unsigned int num)
 }
 
 /**
-* chr_top - prints the char at the top of the stack_t list if its in ascii range
+* chr_top - prints the char at  top of the stack_t list if its in ascii range
 * and list is not empty.
 * @head: pointer to head pointer of list
 * @num: line number of opcode
@@ -35,7 +35,7 @@ void swap_tops(stack_t **head, unsigned int num)
 **/
 void chr_top(stack_t **head, unsigned int num)
 {
-	if (!head || !(*head))
+	if (head == NULL || *head == NULL)
 	{
 		printf("L%d: can't pchar, stack empty\n", num);
 		exit(EXIT_FAILURE);
@@ -60,7 +60,7 @@ void str_top(stack_t **head, unsigned int num)
 	stack_t *tmp;
 	(void)num;
 
-	if (*head)
+	if (*head != NULL)
 	{
 		tmp = *head;
 		while (tmp && (tmp->n > 0 && tmp->n < 128))

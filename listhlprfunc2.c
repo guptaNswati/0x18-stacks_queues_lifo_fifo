@@ -34,7 +34,7 @@ void print_top(stack_t **head, unsigned int num)
 		printf("%d\n", (*head)->n);
 	else
 	{
-		printf("L%d: can't print, stack empty\n", num);
+		printf("L%d: can't pint, stack empty\n", num);
 		exit(EXIT_FAILURE);
 	}
 }
@@ -43,6 +43,7 @@ void print_top(stack_t **head, unsigned int num)
 /**
 * print_list - prints stack_t list.
 * @head: pointer to head pointer to stack_t list
+* @num: line number of opcode
 * Return: nothing
 **/
 void print_list(stack_t **head, unsigned int num)
