@@ -52,12 +52,13 @@ typedef struct save_mem
 	struct save_mem *next;
 } save_mem;
 
-extern save_mem *mem_head;
+extern stack_t *main_head;
 
 /** FUNCTION PROTOTYPES **/
 void ac_check(int ac);
 void av_check(char *av);
-void malloc_fail(void);
+void malloc_fail(char *s1, char *s2, char *s3);
+void free_all(char *s1, char *s2, char *s3);
 void push(stack_t **head, char *data, int *flag, unsigned int num);
 void (*get_op_code(char *opcode))(stack_t **head, unsigned int num);
 void instrction_caller(char *, unsigned int, stack_t **, int *);

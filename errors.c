@@ -69,21 +69,30 @@ void av_check(char *av)
  * Return: void
  */
 
-void malloc_fail(void)
+void malloc_fail(char *s1, char *s2, char *s3)
 {
+	if (s1 != NULL)
+		free(s1);
+	if (s2 != NULL)
+		free(s2);
+	if (s3 != NULL)
+		free(s3);
 	printf("Error: malloc failed\n");
 	exit(EXIT_FAILURE);
 }
 
 /**
- * invalid_instruction - error handler for invalid instruction
- * @line_number: int line number indicating which line number caused failure
- * @opcode: string containing unknown operational code
+ * free_all - frees the  char arrays created in main
+ *
  * Return: void
  */
 
-void invalid_instruction(int line_number, char *opcode)
+void free_all(char *s1, char *s2, char *s3)
 {
-	printf("L%d: unknown instruction %s\n", line_number, opcode);
-	exit(EXIT_FAILURE);
+	if (s1 != NULL)
+		free(s1);
+	if (s2 != NULL)
+		free(s2);
+	if (s3 != NULL)
+		free(s3);
 }

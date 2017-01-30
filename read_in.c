@@ -11,6 +11,7 @@
 void push(stack_t **head, char *data, int *flag, unsigned int num)
 {
 	int i = 0, length = strlen(data);
+	stack_t *main_head = *head;
 
 	for (i = 0; i < length; i++)
 	{
@@ -25,6 +26,7 @@ void push(stack_t **head, char *data, int *flag, unsigned int num)
 		add_end(head, atoi(data));
 	else /* stack mode */
 		add_front(head, atoi(data));
+	//free(data);
 }
 
 /**
@@ -72,6 +74,7 @@ void instrction_caller(char *opcode, unsigned int num, stack_t **head,
 		       int *flag)
 {
 	void (*f)(stack_t **, unsigned int);
+	stack_t *main_head = *head;
 
 	if (strcmp(opcode, "stack") == 0)
 		*(flag) = 0;

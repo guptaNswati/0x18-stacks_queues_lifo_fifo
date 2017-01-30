@@ -19,7 +19,10 @@ stack_t *add_front(stack_t **head, int data)
 	}
 	new->n = data;
 	new->prev = NULL;
-	new->next = *head;
+	if (*head == NULL)
+		new->next = NULL;
+	else
+		new->next = *head;
 	*head = new;
 	return (new);
 }

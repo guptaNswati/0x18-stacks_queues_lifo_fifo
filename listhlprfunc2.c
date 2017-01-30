@@ -57,6 +57,8 @@ void print_list(stack_t **head, unsigned int num)
 	while (tmp)
 	{
 		printf("%d\n", tmp->n);
+		printf("address:%p\n", tmp);
 		tmp = tmp->next;
 	}
+	freelist(head);
 }
